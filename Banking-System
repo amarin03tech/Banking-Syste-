@@ -1,1 +1,60 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+
+    float balance = 0.0;
+    int option;
+    float amount;
+
+    while (true) {
+        cout << "====== Banking System ======";
+        cout << "1. Deposit Money";
+        cout << "2. Withdraw Money";
+        cout << "3. Check Balance";
+        cout << "4. Exit"; 
+        cout << "=============================";
+        cout << "Choose an option(1-4)"
+        cin >> option;
+
+        switch(option) {
+            case 1:
+            cout << "Enter amount to deposit";
+            cin >> amount;
+               if (amount >0) {
+                balance += amount;
+                cout << "Deposit succesful! New balance: " << balance << endl;
+            } else {
+                cout << "Invalid amount. Deposit must be positive.";
+            }
+            break;
+
+            case 2: 
+            cout << "Enter amount to withdraw";
+            cin >> amount; 
+            if (amount > 0 && amount <= balance) {
+            balance -= amount; 
+            cout << "Withdrawal successful! New balance: " << balance << endl;
+            } else if (amount <= 0) {
+                cout << "Ivalid amount. Withdrawal must be positve"; 
+            } else { 
+                cout << "Insufficient funds. Withdrawal failed.";
+            }
+            break;
+
+            case 3: 
+            cout << "Your current balance is: " << balance << endl;
+            break; 
+
+            case 4: 
+            cout << "Exiting the banking system. Thank you for your service";
+
+            default:
+            cout << "Invalit option! Please choose a valid menu option.";
+        }
+    }
+
+return 0;
+}
 
