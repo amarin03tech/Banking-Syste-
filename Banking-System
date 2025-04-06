@@ -15,7 +15,7 @@ int main() {
         cout << "3. Check Balance";
         cout << "4. Exit"; 
         cout << "=============================";
-        cout << "Choose an option(1-4)"
+        cout << "Choose an option(1-4)";
         cin >> option;
 
         switch(option) {
@@ -57,4 +57,3 @@ int main() {
 
 return 0;
 }
-
